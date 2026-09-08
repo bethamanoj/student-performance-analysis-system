@@ -159,4 +159,3 @@ def delete_student():
     finally:
         cursor.close()
         connection.close()
-
