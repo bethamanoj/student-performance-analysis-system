@@ -21,7 +21,6 @@ while True:
     print('12.  Performance Prediction')
     print('13.  Student Report')
     print('14.  Exit')
-
     choice = input('\n Enter the choice: ')
     if choice == '1':
         add_student()
