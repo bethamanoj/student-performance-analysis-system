@@ -88,7 +88,11 @@ def numpy_statistics():
         return
     try:
         cursor = connection.cursor()
-        query = """ SELECT s.student_name, sub.subject_name, m.marks FROM marks m JOIN students s ON m.student_id = s.student_id JOIN subjects sub ON m.subject_id = sub.subject_id WHERE m.student_id = %s ORDER BY sub.subject_id """ 
+        query = """ SELECT s.student_name, sub.subject_name, m.marks FROM marks m 
+        JOIN students s ON m.student_id = s.student_id 
+        JOIN subjects sub ON m.subject_id = sub.subject_id 
+        WHERE m.student_id = %s 
+        ORDER BY sub.subject_id """ 
         cursor.execute(query, (student_id,))
         records = cursor.fetchall()
         student_name = records[0][0]
