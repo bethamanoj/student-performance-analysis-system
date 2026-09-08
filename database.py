@@ -6,4 +6,3 @@ def get_connection():
     except connector.Error as error:
         print('Database connection error:',error)
         return None
-    
